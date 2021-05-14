@@ -1,5 +1,7 @@
 # Spaceship-TickTockNetworks
 
+![image](https://github.com/Ronaldzzzzz/Spaceship-TickTockNetworks/blob/main/doc/image.gif)
+
 This is the initial interview project from Tick Tock Networks.
 In this project, you will build a spaceship dodging game in terminal.
 
