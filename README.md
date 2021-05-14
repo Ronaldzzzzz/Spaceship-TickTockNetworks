@@ -2,7 +2,7 @@
 
 ![image](https://github.com/Ronaldzzzzz/Spaceship-TickTockNetworks/blob/main/doc/image.gif)
 
-[Demo Video - YouTube](https://youtu.be/qSwXCuxjdkA)
+[Demo Video - YouTube](https://youtu.be/YRqH1x5lAp0)
 
 This is the initial interview project from Tick Tock Networks.
 In this project, you will build a spaceship dodging game in terminal.
