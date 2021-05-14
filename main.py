@@ -5,7 +5,9 @@ import time
 import threading
 import sys
 
+# ---------------------------------------
 # Initialize Variables and Strings
+# ---------------------------------------
 
 # Dropping Speed
 SPEED = [1, 0.8 ,0.6 ,0.4, 0.2, 0.1, 0.07, 0.05, 0.03, 0.01]    
@@ -54,6 +56,12 @@ def difficulty_type(x):
     if x < 1 or x > 10:
         raise argparse.ArgumentTypeError("Difficulty must between [1-10]")
     return x
+# ---------------------------------------
+
+
+# ---------------------------------------
+# Render Functions
+# ---------------------------------------
 
 # Render Information When Game End
 def render_end_game(stdscr, rows, cols):
@@ -105,6 +113,7 @@ def render_status_bar(stdscr, rows, cols):
     stdscr.addstr(rows-1, len(status_bar_str + str(score)), " " * (cols - len(status_bar_str + str(score)) - 1))
     stdscr.attroff(curses.color_pair(3))
 
+# Main Render Function
 def rendering(stdscr):
     global obstacles_list, ship_location, end_flag
     rows, cols = stdscr.getmaxyx()
@@ -125,8 +134,12 @@ def rendering(stdscr):
         render_status_bar(stdscr, rows, cols)
 
         stdscr.refresh()
+# ---------------------------------------
 
+# ---------------------------------------
 # Thread Target Function
+# ---------------------------------------
+
 def update_obstacles():
     global obstacles_list, ship_location, end_flag, score, args, difficulty
     
@@ -146,6 +159,11 @@ def update_obstacles():
 
         # Dropping Speed
         time.sleep(difficulty)
+# ---------------------------------------
+
+# ---------------------------------------
+# Main Scene(screen/curses) Function
+# ---------------------------------------
 
 def run(stdscr):
     global ship_location, args
@@ -184,7 +202,7 @@ def run(stdscr):
             pass
 
     curses.endwin()
-    
+# ---------------------------------------
 
 if __name__ == '__main__':
     init()
